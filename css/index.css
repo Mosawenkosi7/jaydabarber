@@ -1,0 +1,305 @@
+.hero {
+  color: white;
+  padding: 20px;
+  width: 100%;
+  height: 300px;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../media/images/homepage/hero-img.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 45px !important;
+  /* color: red !important; */
+  font-weight: bolder !important;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-top: 27px;
+}
+
+.book-btn {
+  margin-top: 30px;
+}
+/* services and prices section */
+.services-prices {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.services-prices h2,
+p {
+  margin-bottom: 0 !important;
+}
+.service-title p {
+  font-size: 12px !important;
+  text-align: center;
+  margin-top: 8px;
+  font-weight: 600;
+  color: #9e0c84;
+}
+
+.style-price {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.style-pic {
+  width: 100%;
+}
+
+.style-pic img {
+  width: 100%;
+}
+
+.style-price .item {
+  font-weight: bold;
+}
+
+.reviews {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.review-card {
+  /* background-color: orange; */
+  /* height: 250px; */
+  padding: 16px;
+  padding-bottom: 20px;
+  margin: 15px;
+  border-radius: 8px;
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.12),
+    0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.card-details {
+  /* background-color: blue; */
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-pic-details {
+  display: flex;
+  gap: 10px;
+}
+.profile-pic img {
+  max-height: 100%;
+  /* max-width: 100%; */
+  border-radius: 50%;
+}
+
+.profile-pic {
+  border: 2px solid purple;
+
+  width: 60px;
+  height: 60px;
+  background-color: yellow;
+}
+
+.card-details i {
+  margin-right: 3px;
+}
+/* Hide carousel navigation arrows on mobile devices */
+@media (max-width: 767px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none !important;
+  }
+}
+/* Make profile pictures circular */
+.profile-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #ddd;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+/* Tablet optimizations (768px and up) */
+@media (min-width: 768px) {
+  .hero {
+    height: 400px;
+    padding: 40px;
+  }
+
+  .hero h1 {
+    font-size: 55px;
+    margin-bottom: 30px;
+  }
+
+  .hero p {
+    font-size: 20px;
+    margin-bottom: 35px;
+  }
+
+  .services-prices {
+    padding: 40px 20px;
+    margin-top: 40px;
+  }
+
+  .services-prices h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  .style-price {
+    max-width: 600px;
+    gap: 30px;
+  }
+
+  .style-price .item p:first-of-type {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+
+  .style-price .item p:last-of-type {
+    font-size: 20px;
+    margin-top: 8px;
+  }
+
+  .reviews {
+    padding: 40px 20px;
+  }
+
+  .reviews h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+}
+
+/* Desktop optimizations (1024px and up) */
+@media (min-width: 1024px) {
+  .hero {
+    height: 500px;
+    padding: 60px;
+  }
+
+  .hero h1 {
+    font-size: 65px;
+    margin-bottom: 35px;
+  }
+
+  .hero p {
+    font-size: 22px;
+    margin-bottom: 40px;
+  }
+
+  .services-prices {
+    padding: 60px 40px;
+    margin-top: 50px;
+  }
+
+  .services-prices h2 {
+    font-size: 42px;
+    margin-bottom: 40px;
+  }
+
+  .style-price {
+    max-width: 1000px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+
+  .style-price .item {
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .style-price .item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .style-price .item p:first-of-type {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+
+  .style-price .item p:last-of-type {
+    font-size: 22px;
+    margin-top: 10px;
+  }
+
+  .reviews {
+    padding: 60px 40px;
+  }
+
+  .reviews h2 {
+    font-size: 42px;
+    margin-bottom: 40px;
+  }
+
+  .review-card {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+
+  .profile-pic {
+    width: 80px;
+    height: 80px;
+  }
+
+  .review-text p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+}
+
+/* Large desktop optimizations (1200px and up) */
+@media (min-width: 1200px) {
+  .hero {
+    height: 600px;
+    padding: 80px;
+  }
+
+  .hero h1 {
+    font-size: 75px;
+  }
+
+  .hero p {
+    font-size: 24px;
+  }
+
+  .services-prices {
+    padding: 80px 60px;
+  }
+
+  .style-price {
+    max-width: 1200px;
+    gap: 50px;
+  }
+
+  .reviews {
+    padding: 80px 60px;
+  }
+
+  .review-card {
+    max-width: 900px;
+    padding: 40px;
+  }
+}

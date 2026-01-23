@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="JaydaBarber - Professional barbershop services"
+    />
+    <title>JaydaBarber - Home</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/index.css" />
+
+    <!-- bootstrap link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="media/images/logo/logo.png" alt="JaydaBarber Logo" />
+      </div>
+
+      <!-- Book button for header (hidden initially) -->
+      <button class="book-btn header-book-btn">Book Now</button>
+
+      <!-- Hamburger button -->
+      <button class="hamburger" aria-label="Toggle menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <!-- Full screen navigation overlay -->
+      <nav class="nav-overlay">
+        <button class="close-btn" aria-label="Close menu">&times;</button>
+        <h2>Jay<span>Da</span>Barber</h2>
+        <a href="/about.html">About</a>
+        <div class="book-gallery-btns">
+          <button class="book-btn">Book Now</button>
+          <button class="book-btn" style="margin-left: 8px">Gallery</button>
+        </div>
+        <p>We at Jaysbabershop render both male and female grooming</p>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Fresh Fade, <br />Every Day.</h1>
+        <p>Step in, sit back, and leave looking your best</p>
+        <button class="book-btn">Book Now</button>
+      </section>
+
+      <section class="services-prices">
+        <div class="service-title">
+          <h2>Our Services & Prices</h2>
+          <p>We carter for both Men and Women</p>
+        </div>
+        <div class="style-price">
+          <div class="item">
+            <div class="style-pic">
+              <img
+                src="media/images/homepage/mawak.png"
+                alt="Mawhak hairstyle"
+              />
+            </div>
+            <p>Mawhak <br />R150</p>
+          </div>
+          <div class="item">
+            <div class="style-pic">
+              <img
+                src="media/images/homepage/bleach.png"
+                alt="Bleach and dye hairstyle"
+              />
+            </div>
+            <p>Bleach & dye <br />R250</p>
+          </div>
+          <div class="item">
+            <div class="style-pic">
+              <img
+                src="media/images/homepage/cut&dye.png"
+                alt="Cut and dye hairstyle"
+              />
+            </div>
+            <p>Cut & Dye <br />R120</p>
+          </div>
+          <div class="item">
+            <div class="style-pic">
+              <img src="media/images/homepage/fade.png" alt="Fade hairstyle" />
+            </div>
+            <p>Fade <br />R50</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews">
+        <h2 style="text-align: center">Reviews</h2>
+        <div id="carouselExampleDark" class="carousel carousel-dark slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+              style="background-color: #9e0c84"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+              style="background-color: #9e0c84"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+              style="background-color: #9e0c84"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <div class="review-card">
+                <div class="card-details">
+                  <div class="profile-pic-details">
+                    <div class="profile-pic">
+                      <img
+                        src="/media/images/homepage/reviews/review1.png"
+                        alt=""
+                        srcset=""
+                      />
+                    </div>
+                    <h6>
+                      Kabelo <br />
+                      <i class="bi bi-star-fill" style="color: #ffc107"></i>
+                      <i class="bi bi-star-fill" style="color: #ffc107"></i>
+                      <i class="bi bi-star-fill" style="color: #ffc107"></i>
+                      <i class="bi bi-star-fill" style="color: #ffc107"></i>
+                      <i class="bi bi-star-fill" style="color: #ffc107"></i>
+                    </h6>
+                  </div>
+                  <div class="review-text">
+                    <p>
+                      JayDaBarber delivers consistently clean, sharp cuts with
+                      great attention to detail. The service is professional,
+                      the environment is welcoming, and you always leave looking
+                      fresh💇🏾🥶.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <div class="review-card">
+                <div class="card-details">
+                  <div class="profile-pic-details">
+                    <div class="profile-pic">
+                      <img
+                        src="/media/images/homepage/reviews/review2.png"
+                        alt=""
+                        srcset=""
+                      />
+                    </div>
+                    <h6>
+                      Tacit <br />
+                      <i class="bi bi-star-fill" style="color: #ffc107"></i>
+                      <i class="bi bi-star-fill" style="color: #ffc107"></i>
+                      <i class="bi bi-star-fill" style="color: #ffc107"></i>
+                      <i class="bi bi-star-fill" style="color: #ffc107"></i>
+                      <i class="bi bi-star-fill" style="color: #ffc107"></i>
+                    </h6>
+                  </div>
+                  <div class="review-text">
+                    <p>
+                      Excellent barber with real skill and passion for his
+                      craft. Jay takes the time to understand exactly what you
+                      want and delivers every time. Highly recommended💐.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="review-card">
+                <div class="card-details">
+                  <div class="profile-pic-details">
+                    <div class="profile-pic">
+                      <img
+                        src="/media/images/homepage/reviews/review3.jpeg"
+                        alt=""
+                      />
+                    </div>
+                    <h6>
+                      Tshepo <br />
+                      <i class="bi bi-star-fill" style="color: #ffc107"></i>
+                      <i class="bi bi-star-fill" style="color: #ffc107"></i>
+                      <i class="bi bi-star-fill" style="color: #ffc107"></i>
+                      <i class="bi bi-star-fill" style="color: #ffc107"></i>
+                      <i class="bi bi-star-fill" style="color: #ffc107"></i>
+                    </h6>
+                  </div>
+                  <div class="review-text">
+                    <p>
+                      Top-tier service from start to finish. Clean fades,
+                      precise line-ups, and a relaxed atmosphere. JayDaBarber is
+                      the go-to spot for quality grooming🔥🫣.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="logo-social">
+          <div class="log-footer">
+            <img src="/media/images/logo/logo.png" alt="" />
+          </div>
+          <div class="social-media">
+            <a
+              href="https://www.facebook.com/share/182EmKsnSv/?mibextid=wwXIfr"
+              class="social-link"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/thatojayii?igsh=aWF4YnRtM2o3OGJh&utm_source=qr"
+              ><i class="bi bi-instagram"></i
+            ></a>
+
+            <a
+              href="https://www.tiktok.com/@thato.jay.ii?_r=1&_t=ZS-93Hh9ukzPnR"
+            >
+              <i class="bi bi-tiktok"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="working-info">
+          <h4>Working Hours</h4>
+          <div class="time">
+            <p>
+              <i class="bi bi-calendar3" style="margin-right: 8px"></i>Tuesday -
+              Sunday: 10:00 - 18:00
+            </p>
+            <p>Monday: Closed</p>
+          </div>
+          <div class="location">
+            <p>
+              <i class="bi bi-geo-alt-fill" style="margin-right: 8px"></i>228
+              Block X, Soshanguve -BB, 0152, South Africa
+            </p>
+          </div>
+        </div>
+        <p class="copy-right">©2026 Jayda Barber. All rights reserved.</p>
+      </footer>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

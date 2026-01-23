@@ -1,0 +1,434 @@
+/* Mobile-first base styles - shared across all pages */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, sans-serif;
+  /* line-height: 1.6; */
+  color: #333;
+  padding-top: 120px;
+}
+
+header {
+  display: flex;
+  align-items: end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 6px;
+}
+
+/* Header book button - hidden by default */
+.header-book-btn {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  margin-left: 0px;
+}
+
+/* Show header book button when scrolled */
+.header-scrolled .header-book-btn {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.logo {
+  /* width: 100px; */
+  height: 100px;
+  background-color: blue;
+  margin-right: 8px;
+}
+
+.logo img {
+  /* width: 100%; */
+  background-color: red;
+  max-height: 100%;
+}
+
+.book-btn {
+  /* margin-top: 30px; */
+  padding: 6px 12px;
+  background-color: #9e0c84;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Hamburger Menu Button - Mobile */
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  margin-left: auto;
+  z-index: 1001;
+  transition: opacity 0.3s ease;
+}
+
+.hamburger.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hamburger-line {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  transition: all 0.3s ease;
+}
+
+/* Full Screen Navigation Overlay */
+.nav-overlay {
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.nav-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: -0px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: black;
+  font-size: 48px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+.nav-overlay span {
+  color: #9e0c84;
+  font-weight: 700;
+}
+
+.nav-overlay a {
+  color: black;
+}
+
+.close-btn:hover {
+  transform: rotate(90deg);
+}
+
+/* Navigation List */
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #667eea;
+}
+
+/* Tablet and up - Hide hamburger, show inline nav */
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav-overlay {
+    position: static;
+    width: auto;
+    height: auto;
+    background: none;
+    opacity: 1;
+    visibility: visible;
+    flex-direction: row;
+  }
+
+  .close-btn {
+    display: none;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .nav-link {
+    color: #333;
+    font-size: 16px;
+  }
+
+  .nav-link:hover {
+    color: #667eea;
+  }
+}
+
+/* footer design styles */
+footer {
+  background: radial-gradient(circle at right, #9e0c84 0%, #000000 70%);
+  /* height: 100px; */
+
+  display: grid;
+  grid-template-columns: 0.7fr 1fr;
+  /* padding-bottom: 10px; */
+}
+
+.logo-social {
+  /* background-color: yellow; */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+
+  justify-content: center;
+}
+
+.log-footer {
+  width: 120px;
+  height: 120px;
+  margin-top: 20px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.log-footer img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.working-info {
+  /* background-color: red; */
+  color: white;
+  padding: 20px;
+}
+
+.working-info p {
+  font-size: 14px;
+}
+.working-info .time {
+  border-bottom: 1px solid white;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.social-media {
+  /* background-color: orange; */
+  display: flex;
+  gap: 20px;
+  color: white;
+}
+
+.social-media a,
+.social-media a:link,
+.social-media a:visited,
+.social-media a:active {
+  color: white !important;
+  text-decoration: none;
+}
+
+.social-media a:hover {
+  color: #ff6b9d !important;
+}
+
+/* Ensure copyright text stays white and unaffected */
+.copy-right {
+  color: white !important;
+  font-size: 11px;
+  grid-column: 1 / span 2;
+  text-align: center;
+  /* border-bottom: 1px solid white; */
+  padding-bottom: 5px;
+  margin-top: 7px;
+}
+
+/* Tablet and Desktop footer optimizations (481px and up) */
+@media (min-width: 481px) {
+  footer {
+    padding: 20px;
+  }
+
+  .logo-social {
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .log-footer {
+    width: 140px;
+    height: 140px;
+    margin-top: 0;
+    box-shadow: 0 4px 12px rgba(158, 12, 132, 0.3);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .log-footer:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(158, 12, 132, 0.4);
+  }
+
+  .working-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .working-info p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+
+  .working-info .time {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+
+  .social-media {
+    gap: 25px;
+    margin-top: 10px;
+  }
+
+  .social-media i {
+    font-size: 24px;
+    transition:
+      transform 0.3s ease,
+      color 0.3s ease;
+    cursor: pointer;
+  }
+  .social-media .social-link {
+    color: white !important;
+  }
+
+  .social-media i:hover {
+    transform: translateY(-3px);
+    color: #ff6b9d;
+  }
+}
+
+/* Desktop optimizations (768px and up) */
+@media (min-width: 768px) {
+  footer {
+    padding: 25px 40px;
+    grid-template-columns: 0.6fr 1.4fr;
+  }
+
+  .logo-social {
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .log-footer {
+    width: 160px;
+    height: 160px;
+  }
+
+  .working-info {
+    padding: 25px;
+  }
+
+  .working-info p {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .working-info .time {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    font-size: 19px;
+  }
+
+  .social-media {
+    gap: 30px;
+    margin-top: 15px;
+  }
+
+  .social-media i {
+    font-size: 28px;
+  }
+}
+
+/* Large desktop optimizations (1024px and up) */
+@media (min-width: 1024px) {
+  footer {
+    padding: 30px 60px;
+    grid-template-columns: 0.5fr 1.5fr;
+  }
+
+  .logo-social {
+    gap: 25px;
+    padding: 20px;
+  }
+
+  .log-footer {
+    width: 180px;
+    height: 180px;
+  }
+
+  .working-info {
+    padding: 30px;
+  }
+
+  .working-info p {
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+
+  .working-info .time {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    font-size: 21px;
+  }
+
+  .social-media {
+    gap: 35px;
+    margin-top: 20px;
+  }
+
+  .social-media i {
+    font-size: 32px;
+  }
+}
