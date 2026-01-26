@@ -47,13 +47,11 @@ header {
 .logo {
   /* width: 100px; */
   height: 100px;
-  background-color: blue;
   margin-right: 8px;
 }
 
 .logo img {
   /* width: 100%; */
-  background-color: red;
   max-height: 100%;
 }
 
@@ -97,10 +95,11 @@ header {
 .nav-overlay {
   padding: 20px;
   position: fixed;
+  height: 100vh;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  overflow: scroll;
   background-color: white;
   /* display: flex; */
   flex-direction: column;
@@ -142,6 +141,35 @@ header {
   color: black;
 }
 
+.book-gallery-btns {
+  margin-bottom: 16px;
+}
+
+.working-time {
+  margin-bottom: 16px !important;
+}
+.availability {
+  margin-top: 30px;
+}
+
+.social-media-nav {
+  display: flex;
+  margin-top: 16px;
+  gap: 16px;
+}
+
+.nav-logo {
+  /* height: 100px;s */
+  width: 80%;
+  background-color: orange;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.nav-logo img {
+  width: 100%;
+  display: block;
+}
 .close-btn:hover {
   transform: rotate(90deg);
 }

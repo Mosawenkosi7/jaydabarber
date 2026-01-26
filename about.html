@@ -8,7 +8,10 @@
       content="About JaydaBarber - Learn more about our story"
     />
     <title>JaydaBarber - About</title>
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/about.css" />
     <!-- bootstrap link -->
@@ -21,35 +24,164 @@
   </head>
   <body>
     <header class="header">
-      <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img
-              src="/media/images/logo/logo.png"
-              alt="Logo"
-              width="30"
-              height="24"
-              class="d-inline-block align-text-top"
-            />
-          </a>
+      <div class="logo">
+        <img src="media/images/logo/logo.png" alt="JaydaBarber Logo" />
+      </div>
+
+      <!-- Book button for header (hidden initially) -->
+      <button class="book-btn header-book-btn">Book Now</button>
+
+      <!-- Hamburger button -->
+      <button class="hamburger" aria-label="Toggle menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <!-- Full screen navigation overlay -->
+      <nav class="nav-overlay">
+        <button class="close-btn" aria-label="Close menu">&times;</button>
+        <h2>Jay<span>Da</span>Barber</h2>
+        <a href="/index.html">Home</a>
+        <div class="book-gallery-btns">
+          <button class="book-btn">Book Now</button>
+          <button class="book-btn" style="margin-left: 8px">Gallery</button>
+        </div>
+        <p>We at Jaysbabershop render both male and female grooming.</p>
+        <div class="availability">
+          <h3>Working Hours</h3>
+          <p class="time">
+            <i class="bi bi-calendar3" style="margin-right: 8px"></i>Tuesday -
+            Sunday: 09:00 - 18:00
+          </p>
+          <p>Monday: Closed</p>
+          <p class="working-time"></p>
+          <p class="place">
+            <i class="bi bi-geo-alt-fill" style="margin-right: 8px"></i>228
+            Block X, Soshanguve-BB
+          </p>
+          <p>0152, South Africa | Davin lifestyle</p>
+        </div>
+        <h3 style="margin-top: 16px">Follow us at</h3>
+        <div class="social-media-nav">
+          <a
+            href="https://www.facebook.com/share/182EmKsnSv/?mibextid=wwXIfr"
+            class="social-link"
+            ><i class="bi bi-facebook"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/thatojayii?igsh=aWF4YnRtM2o3OGJh&utm_source=qr"
+            ><i class="bi bi-instagram"></i
+          ></a>
+
+          <a href="https://www.tiktok.com/@thato.jay.ii?_r=1&_t=ZS-93Hh9ukzPnR">
+            <i class="bi bi-tiktok"></i
+          ></a>
+        </div>
+        <div class="nav-logo">
+          <img src="media/images/logo/logo.png" alt="" />
         </div>
       </nav>
     </header>
 
     <main>
-      <section class="about-section">
-        <div class="container">
-          <h1>About Us</h1>
-          <p>Learn more about JaydaBarber</p>
+      <section class="story-of-jay">
+        <h1>The Story of Jay<span>da </span>Barber</h1>
+        <div class="pic-video">
+          <img
+            id="mainImage"
+            src="/media/images/about/WhatsApp Image 2026-01-19 at 14.41.40.jpeg"
+            alt=""
+          />
+        </div>
+        <div class="image-indicators">
+          <span
+            class="indicator active"
+            data-image="/media/images/about/WhatsApp Image 2026-01-19 at 14.41.40.jpeg"
+          ></span>
+          <span
+            class="indicator"
+            data-image="/media/images/about/image2.jpeg"
+          ></span>
         </div>
       </section>
+
+      <section class="question-answer">
+        <div class="q_a_card">
+          <p><i class="bi bi-person-raised-hand"></i>Who is jayda Barber?</p>
+          <p>
+            <i class="bi bi-chat-text" style="margin-right: 8px"></i>Jay da
+            barber is just a guy who is passionate about serving the people
+            through the art of barbering,bringing the freshest haircuts and
+            boosting confidence of each and every client/customer
+          </p>
+        </div>
+        <div class="q_a_card">
+          <p><i class="bi bi-person-raised-hand"></i>How did it all start?</p>
+          <p>
+            <i class="bi bi-chat-text" style="margin-right: 8px"></i>It all
+            started as a side hustle that eventually sparked passion for
+            barbering,and that’s when everything started falling into place.
+          </p>
+        </div>
+
+        <div class="q_a_card">
+          <p>
+            <i class="bi bi-person-raised-hand"></i>What makes Jaydar Barber
+            different?
+          </p>
+          <p>
+            <i class="bi bi-chat-text" style="margin-right: 8px"></i>We’re
+            always striving to improve better and better each time a customer
+            enters our doors.
+          </p>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="logo-social">
+          <div class="log-footer">
+            <img src="/media/images/logo/logo.png" alt="" />
+          </div>
+          <div class="social-media">
+            <a
+              href="https://www.facebook.com/share/182EmKsnSv/?mibextid=wwXIfr"
+              class="social-link"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/thatojayii?igsh=aWF4YnRtM2o3OGJh&utm_source=qr"
+              ><i class="bi bi-instagram"></i
+            ></a>
+
+            <a
+              href="https://www.tiktok.com/@thato.jay.ii?_r=1&_t=ZS-93Hh9ukzPnR"
+            >
+              <i class="bi bi-tiktok"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="working-info">
+          <h4>Working Hours</h4>
+          <div class="time">
+            <p>
+              <i class="bi bi-calendar3" style="margin-right: 8px"></i>Tuesday -
+              Sunday: 10:00 - 18:00
+            </p>
+            <p>Monday: Closed</p>
+          </div>
+          <div class="location">
+            <p>
+              <i class="bi bi-geo-alt-fill" style="margin-right: 8px"></i>228
+              Block X, Soshanguve -BB, 0152, South Africa
+            </p>
+          </div>
+        </div>
+        <p class="copy-right">©2026 Jayda Barber. All rights reserved.</p>
+      </footer>
     </main>
 
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; 2026 JaydaBarber. All rights reserved.</p>
-      </div>
-    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"

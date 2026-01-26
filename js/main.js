@@ -45,6 +45,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
   
+  // Gallery button navigation
+  const galleryButtons = document.querySelectorAll('.book-gallery-btns .book-btn');
+  if (galleryButtons.length > 1) {
+    galleryButtons[1].addEventListener('click', () => {
+      window.location.href = '/gallery.html';
+    });
+  }
+  
   // Add smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

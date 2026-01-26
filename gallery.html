@@ -1,46 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="JaydaBarber Gallery - View our work">
-  <title>JaydaBarber - Gallery</title>
-  
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/gallery.css">
-</head>
-<body>
-  <header class="header">
-    <div class="container">
-      <div class="logo">JaydaBarber</div>
-      <nav class="nav">
-        <ul class="nav-list">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="gallery-section">
-      <div class="container">
-        <h1>Our Work</h1>
-        <div class="gallery-grid">
-          <!-- Gallery items will go here -->
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="JaydaBarber Gallery - View our work" />
+    <title>JaydaBarber - Gallery</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/gallery.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="media/images/logo/logo.png" alt="JaydaBarber Logo" />
       </div>
-    </section>
-  </main>
 
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 JaydaBarber. All rights reserved.</p>
-    </div>
-  </footer>
+      <!-- Book button for header (hidden initially) -->
+      <button class="book-btn header-book-btn">Book Now</button>
 
-  <script src="js/main.js"></script>
-  <script src="js/gallery.js"></script>
-</body>
+      <!-- Hamburger button -->
+      <button class="hamburger" aria-label="Toggle menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <!-- Full screen navigation overlay -->
+      <nav class="nav-overlay">
+        <button class="close-btn" aria-label="Close menu">&times;</button>
+        <h2>Jay<span>Da</span>Barber</h2>
+        <a href="/index.html" style="margin-right: 16px">Home</a>
+        <a href="/about.html">About</a>
+        <div class="book-gallery-btns" style="margin-top: 20px">
+          <button class="book-btn">Book Now</button>
+        </div>
+        <p>We at Jaysbabershop render both male and female grooming.</p>
+        <div class="availability">
+          <h3>Working Hours</h3>
+          <p class="time">
+            <i class="bi bi-calendar3" style="margin-right: 8px"></i>Tuesday -
+            Sunday: 09:00 - 18:00
+          </p>
+          <p>Monday: Closed</p>
+          <p class="working-time"></p>
+          <p class="place">
+            <i class="bi bi-geo-alt-fill" style="margin-right: 8px"></i>228
+            Block X, Soshanguve-BB
+          </p>
+          <p>0152, South Africa | Davin lifestyle</p>
+        </div>
+        <h3 style="margin-top: 16px">Follow us at</h3>
+        <div class="social-media-nav">
+          <a
+            href="https://www.facebook.com/share/182EmKsnSv/?mibextid=wwXIfr"
+            class="social-link"
+            ><i class="bi bi-facebook"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/thatojayii?igsh=aWF4YnRtM2o3OGJh&utm_source=qr"
+            ><i class="bi bi-instagram"></i
+          ></a>
+
+          <a href="https://www.tiktok.com/@thato.jay.ii?_r=1&_t=ZS-93Hh9ukzPnR">
+            <i class="bi bi-tiktok"></i
+          ></a>
+        </div>
+        <div class="nav-logo">
+          <img src="media/images/logo/logo.png" alt="" />
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="intro">
+        <h1>Fresh Cuts, Real Results</h1>
+        <p>
+          At JaydaBarber, we provide expert haircuts and styles for both men and
+          women.
+        </p>
+      </div>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+  </body>
 </html>
