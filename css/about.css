@@ -2,14 +2,8 @@ body {
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
     url("/media/images/about/background-design.jpg");
-  background-position: cover;
-  /* background-repeat: no-repeat; */
-  background-size: contain;
+  background-position: center;
 }
-h1 {
-  font-weight: 800;
-}
-
 .book-gallery-btns {
   margin-top: 20px;
 }
@@ -23,14 +17,13 @@ h1 {
 }
 
 .question-answer {
-  /* background-color: red; */
   /* margin-top: 20px; */
 
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  padding: 20px 0;
+  padding-top: 30px;
   margin-bottom: 30px;
 }
 
@@ -63,75 +56,205 @@ h1 {
   }
 }
 
-.q_a_card {
-  width: 80%;
-  border-radius: 8px;
-  padding: 20px;
-  background-color: white;
-  box-shadow:
-    0 20px 40px rgba(0, 0, 0, 0.15),
-    0 10px 20px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  animation: fadeInUp 0.8s ease-out forwards;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+/* Mobile-only flip card styles (max 480px) */
+@media (max-width: 480px) {
+  .q_a_card {
+    width: 80%;
+    height: 200px;
+    perspective: 1000px;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .q_a_card.flipped .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: white;
+    box-shadow:
+      0 20px 40px rgba(0, 0, 0, 0.15),
+      0 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-front {
+    cursor: pointer;
+  }
+
+  .card-back {
+    transform: rotateY(180deg);
+    justify-content: flex-start;
+    padding-top: 40px;
+  }
+
+  .question-text {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin: 0;
+  }
+
+  .question-text i {
+    color: #888;
+    margin-right: 12px;
+  }
+
+  .tap-hint {
+    font-size: 12px;
+    color: #9e0c84;
+    margin-top: 15px;
+    font-style: italic;
+  }
+
+  .close-card {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.3s ease;
+  }
+
+  .close-card:hover {
+    color: #9e0c84;
+  }
+
+  .answer-text {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #555;
+    text-align: left;
+    margin: 0;
+  }
+
+  .answer-text i {
+    color: #9e0c84;
+    margin-right: 10px;
+  }
+
+  .q_a_card:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+
+  .q_a_card:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+
+  .q_a_card:nth-child(5) {
+    animation-delay: 0.6s;
+  }
+
+  .q_a_card:nth-child(6) {
+    animation-delay: 0.8s;
+  }
+
+  .q_a_card:nth-child(7) {
+    margin-bottom: 30px;
+    animation-delay: 1s;
+  }
 }
 
-.q_a_card:hover {
-  transform: translateY(-5px);
-  box-shadow:
-    0 25px 50px rgba(0, 0, 0, 0.2),
-    0 15px 30px rgba(0, 0, 0, 0.15);
-}
-
-.q_a_card p:nth-child(1) {
-  margin-bottom: 12px;
-  font-weight: 600;
-  padding-top: 0;
-  font-size: 17px;
-  color: #333;
-}
-
-.q_a_card p:nth-child(1) i {
-  color: #888;
-  margin-right: 12px;
-}
-
-.q_a_card p:nth-child(2) {
-  font-size: 15px;
-  line-height: 1.7;
-  color: #555;
-}
-
-.q_a_card p:nth-child(2) i {
-  color: #9e0c84;
-  margin-right: 10px;
-}
-
-.q_a_card:nth-child(3) {
-  animation-delay: 0.2s;
-}
-
-.q_a_card:nth-child(4) {
-  animation-delay: 0.4s;
-}
-
-.q_a_card:nth-child(5) {
-  animation-delay: 0.6s;
-}
-
-.q_a_card:nth-child(6) {
-  animation-delay: 0.8s;
-}
-
-.q_a_card:nth-child(7) {
-  margin-bottom: 30px;
-  animation-delay: 1s;
-}
-
-/* Tablet optimizations (481px and up) */
+/* Tablet and Desktop - Regular card layout (481px and up) */
 @media (min-width: 481px) {
+  .q_a_card {
+    width: 75%;
+    border-radius: 12px;
+    padding: 20px;
+    background-color: white;
+    box-shadow:
+      0 20px 40px rgba(0, 0, 0, 0.15),
+      0 10px 20px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .q_a_card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+      0 25px 50px rgba(0, 0, 0, 0.2),
+      0 15px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Hide flip structure, show regular content */
+  .card-inner {
+    display: block;
+  }
+
+  .card-front {
+    display: none;
+  }
+
+  .card-back {
+    display: block;
+    position: static;
+    transform: none;
+    backface-visibility: visible;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    height: auto;
+  }
+
+  .close-card {
+    display: none;
+  }
+
+  .question-text {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #333;
+  }
+
+  .question-text i {
+    color: #888;
+    margin-right: 12px;
+  }
+
+  .tap-hint {
+    display: none;
+  }
+
+  .answer-text {
+    display: block;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+  }
+
+  .answer-text i {
+    color: #9e0c84;
+    margin-right: 10px;
+  }
+
   .question-answer {
     margin-top: 40px;
     gap: 25px;
@@ -142,20 +265,25 @@ h1 {
     font-size: 16px;
   }
 
-  .q_a_card {
-    width: 75%;
-    padding: 20px;
-    border-radius: 12px;
+  .q_a_card:nth-child(3) {
+    animation-delay: 0.2s;
   }
 
-  .q_a_card p:nth-child(1) {
-    font-size: 18px;
-    margin-bottom: 12px;
+  .q_a_card:nth-child(4) {
+    animation-delay: 0.4s;
   }
 
-  .q_a_card p:nth-child(2) {
-    font-size: 16px;
-    line-height: 1.6;
+  .q_a_card:nth-child(5) {
+    animation-delay: 0.6s;
+  }
+
+  .q_a_card:nth-child(6) {
+    animation-delay: 0.8s;
+  }
+
+  .q_a_card:nth-child(7) {
+    margin-bottom: 30px;
+    animation-delay: 1s;
   }
 }
 
@@ -176,12 +304,12 @@ h1 {
     padding: 25px;
   }
 
-  .q_a_card p:nth-child(1) {
+  .question-text {
     font-size: 20px;
     margin-bottom: 15px;
   }
 
-  .q_a_card p:nth-child(2) {
+  .answer-text {
     font-size: 17px;
     line-height: 1.7;
   }
@@ -205,12 +333,12 @@ h1 {
     padding: 30px;
   }
 
-  .q_a_card p:nth-child(1) {
+  .question-text {
     font-size: 22px;
     margin-bottom: 18px;
   }
 
-  .q_a_card p:nth-child(2) {
+  .answer-text {
     font-size: 18px;
     line-height: 1.8;
   }
