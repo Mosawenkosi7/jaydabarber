@@ -63,6 +63,24 @@ header {
   border-radius: 4px;
   color: white;
   font-weight: bold;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.book-btn:hover {
+  background-color: #7a0a68;
+  color: white;
+}
+
+.book-btn:visited,
+.book-btn:link,
+.book-btn:active {
+  color: white;
+  text-decoration: none;
 }
 
 /* Hamburger Menu Button - Mobile */
@@ -201,6 +219,11 @@ header {
     display: none;
   }
 
+  header {
+    padding: 10px 20px;
+    justify-content: space-between;
+  }
+
   .nav-overlay {
     position: static;
     width: auto;
@@ -209,6 +232,33 @@ header {
     opacity: 1;
     visibility: visible;
     flex-direction: row;
+    padding: 0;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .nav-overlay h2,
+  .nav-overlay h3,
+  .nav-overlay p,
+  .nav-overlay .availability,
+  .nav-overlay .social-media-nav,
+  .nav-overlay .nav-logo,
+  .nav-overlay .book-gallery-btns {
+    display: none;
+  }
+
+  .nav-overlay a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .nav-overlay a:hover {
+    color: #9e0c84;
   }
 
   .close-btn {
@@ -226,7 +276,22 @@ header {
   }
 
   .nav-link:hover {
-    color: #667eea;
+    color: #9e0c84;
+  }
+}
+
+/* Desktop optimizations (1024px and up) */
+@media (min-width: 1024px) {
+  header {
+    padding: 10px 40px;
+  }
+
+  .nav-overlay {
+    gap: 30px;
+  }
+
+  .nav-overlay a {
+    font-size: 18px;
   }
 }
 

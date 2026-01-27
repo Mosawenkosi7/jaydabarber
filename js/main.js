@@ -53,6 +53,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
   
+  // Logo click navigation to home
+  const logo = document.querySelector('.logo');
+  if (logo) {
+    logo.style.cursor = 'pointer';
+    logo.addEventListener('click', () => {
+      window.location.href = '/index.html';
+    });
+  }
+  
   // Add smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

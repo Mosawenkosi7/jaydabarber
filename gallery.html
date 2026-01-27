@@ -19,7 +19,7 @@
       </div>
 
       <!-- Book button for header (hidden initially) -->
-      <button class="book-btn header-book-btn">Book Now</button>
+      <a href="https://wa.me/27626469447?text=Hi%20Jay!%20I'd%20like%20to%20book%20an%20appointment%20at%20JaydaBarber.%20When%20are%20you%20available?" target="_blank" rel="noopener noreferrer" class="book-btn header-book-btn"><i class="bi bi-whatsapp"></i> Book Now</a>
 
       <!-- Hamburger button -->
       <button class="hamburger" aria-label="Toggle menu">
@@ -31,11 +31,11 @@
       <!-- Full screen navigation overlay -->
       <nav class="nav-overlay">
         <button class="close-btn" aria-label="Close menu">&times;</button>
-        <h2>Jay<span>Da</span>Barber</h2>
+        <h2 style="margin-bottom: 20px">Jay<span>Da</span>Barber</h2>
         <a href="/index.html" style="margin-right: 16px">Home</a>
         <a href="/about.html">About</a>
         <div class="book-gallery-btns" style="margin-top: 20px">
-          <button class="book-btn">Book Now</button>
+          <a href="https://wa.me/27626469447?text=Hi%20Jay!%20I'd%20like%20to%20book%20an%20appointment%20at%20JaydaBarber.%20When%20are%20you%20available?" target="_blank" rel="noopener noreferrer" class="book-btn"><i class="bi bi-whatsapp"></i> Book Now</a>
         </div>
         <p>We at Jaysbabershop render both male and female grooming.</p>
         <div class="availability">
@@ -82,7 +82,58 @@
           women.
         </p>
       </div>
+      <div class="gallery-grid" id="gallery"></div>
     </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" id="lightbox-close">&times;</button>
+      <button class="lightbox-prev" id="lightbox-prev">&#10094;</button>
+      <div class="lightbox-content" id="lightbox-content"></div>
+      <button class="lightbox-next" id="lightbox-next">&#10095;</button>
+      <div class="lightbox-counter" id="lightbox-counter"></div>
+    </div>
+
+    <footer class="footer">
+      <div class="logo-social">
+        <div class="log-footer">
+          <img src="/media/images/logo/logo.png" alt="" />
+        </div>
+        <div class="social-media">
+          <a
+            href="https://www.facebook.com/share/182EmKsnSv/?mibextid=wwXIfr"
+            class="social-link"
+            ><i class="bi bi-facebook"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/thatojayii?igsh=aWF4YnRtM2o3OGJh&utm_source=qr"
+            ><i class="bi bi-instagram"></i
+          ></a>
+
+          <a href="https://www.tiktok.com/@thato.jay.ii?_r=1&_t=ZS-93Hh9ukzPnR">
+            <i class="bi bi-tiktok"></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="working-info">
+        <h4>Working Hours</h4>
+        <div class="time">
+          <p>
+            <i class="bi bi-calendar3" style="margin-right: 8px"></i>Tuesday -
+            Sunday: 10:00 - 18:00
+          </p>
+          <p>Monday: Closed</p>
+        </div>
+        <div class="location">
+          <p>
+            <i class="bi bi-geo-alt-fill" style="margin-right: 8px"></i>228
+            Block X, Soshanguve -BB, 0152, South Africa
+          </p>
+        </div>
+      </div>
+      <p class="copy-right">©2026 Jayda Barber. All rights reserved.</p>
+    </footer>
 
     <script src="js/main.js"></script>
     <script src="js/gallery.js"></script>
