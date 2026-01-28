@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener("scroll", handleScroll);
   
   // Card flip functionality (mobile only)
-  const cards = document.querySelectorAll('.q_a_card');
+  const cards = document.querySelectorAll('.q_a_card:not(.static-card)');
   
   cards.forEach(card => {
     const cardFront = card.querySelector('.card-front');

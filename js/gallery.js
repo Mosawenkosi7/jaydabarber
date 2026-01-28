@@ -106,14 +106,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // Get gallery container
   const gallery = document.getElementById("gallery");
 
-  // Dynamically render gallery items
+  // Dynamically render gallery items - simplified for performance
   galleryItems.forEach((item, index) => {
     const wrapper = document.createElement("div");
     wrapper.classList.add("gallery-item");
     wrapper.dataset.index = index;
-
-    wrapper.style.gridColumn = `span ${item.colSpan}`;
-    wrapper.style.gridRow = `span ${item.rowSpan}`;
 
     if (item.type === "image") {
       const img = document.createElement("img");
@@ -127,9 +124,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const video = document.createElement("video");
       video.src = item.src;
       video.autoplay = true;
-      video.loop = true;
       video.muted = true;
       video.playsInline = true;
+      video.loop = true;
+      video.preload = "auto"; // Full preload for autoplay
+      
       wrapper.appendChild(video);
     }
 
