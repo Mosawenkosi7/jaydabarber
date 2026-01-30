@@ -1,10 +1,7 @@
 // Gallery page JavaScript
 
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("Gallery page loaded");
-
-  // Gallery data structure
-  const galleryItems = [
+// Gallery data structure - moved outside to load immediately
+const galleryItems = [
     {
       type: "image",
       src: "/media/images/gallery/cut1.jpeg",
@@ -101,12 +98,17 @@ document.addEventListener("DOMContentLoaded", () => {
       colSpan: 1,
       rowSpan: 1,
     },
-  ];
+];
 
-  // Get gallery container
+// Render gallery immediately when script loads
+function renderGallery() {
   const gallery = document.getElementById("gallery");
+  if (!gallery) return; // Exit if gallery not found yet
 
-  // Dynamically render gallery items - simplified for performance
+  // Clear loading state and any existing content
+  gallery.innerHTML = '';
+
+  // Render gallery items with optimized loading
   galleryItems.forEach((item, index) => {
     const wrapper = document.createElement("div");
     wrapper.classList.add("gallery-item");
@@ -116,7 +118,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const img = document.createElement("img");
       img.src = item.src;
       img.alt = "JaydaBarber work";
-      img.loading = "lazy";
+      // Load first 4 images immediately, lazy load the rest
+      img.loading = index < 4 ? "eager" : "lazy";
+      img.decoding = "async"; // Optimize image decoding
       wrapper.appendChild(img);
     }
 
@@ -127,7 +131,8 @@ document.addEventListener("DOMContentLoaded", () => {
       video.muted = true;
       video.playsInline = true;
       video.loop = true;
-      video.preload = "auto"; // Full preload for autoplay
+      video.preload = "metadata"; // Lighter preload for faster initial load
+      video.loading = "lazy";
       
       wrapper.appendChild(video);
     }
@@ -139,6 +144,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     gallery.appendChild(wrapper);
   });
+}
+
+// Try to render immediately if DOM is ready, otherwise wait
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', renderGallery);
+} else {
+  renderGallery();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Gallery page loaded");
 
   // Lightbox functionality
   const lightbox = document.getElementById('lightbox');
