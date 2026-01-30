@@ -3,10 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
     <meta
       name="description"
-      content="JaydaBarber - Professional barbershop services"
+      content="JaydaBarber - Professional barber shop in Soshanguve offering expert haircuts, fades, bleach & dye services for men and women. Book your appointment today!"
     />
+    <meta
+      name="keywords"
+      content="barber shop Soshanguve, haircuts Soshanguve, fade cuts, bleach and dye, men's haircuts, women's haircuts, professional barber, Soshanguve BB, South Africa barber"
+    />
+    <meta name="author" content="JaydaBarber" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Local Business SEO -->
+    <meta name="geo.region" content="ZA-GP" />
+    <meta name="geo.placename" content="Soshanguve" />
+    <meta name="geo.position" content="-25.5372,28.1123" />
+    <meta name="ICBM" content="-25.5372,28.1123" />
+
+    <!-- Open Graph Tags for Social Media -->
+    <meta
+      property="og:title"
+      content="JaydaBarber - Professional Barber Shop in Soshanguve"
+    />
+    <meta
+      property="og:description"
+      content="Expert haircuts, fades, and styling services for men and women. Located in Soshanguve BB, South Africa. Book your appointment today!"
+    />
+    <meta
+      property="og:image"
+      content="https://jaydabarber.com/media/images/logo/logo.png"
+    />
+    <meta property="og:url" content="https://jaydabarber.com" />
+    <meta property="og:type" content="business.business" />
+    <meta property="og:locale" content="en_ZA" />
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="JaydaBarber - Professional Barber Shop"
+    />
+    <meta
+      name="twitter:description"
+      content="Expert haircuts and styling in Soshanguve. Book your appointment today!"
+    />
+    <meta
+      name="twitter:image"
+      content="https://jaydabarber.com/media/images/logo/logo.png"
+    />
+
     <title>JaydaBarber - Home</title>
     <link
       rel="stylesheet"
@@ -19,6 +66,93 @@
       href="/media/images/logo/logo.png"
       type="image/x-icon"
     />
+
+    <!-- Structured Data for Local Business -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HairSalon",
+        "name": "JaydaBarber",
+        "description": "Professional barber shop offering expert haircuts, fades, bleach & dye services for men and women in Soshanguve.",
+        "url": "https://jaydabarber.com",
+        "logo": "https://jaydabarber.com/media/images/logo/logo.png",
+        "image": "https://jaydabarber.com/media/images/homepage/hero-img.jpg",
+        "telephone": "+27626469447",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "228 Block X, Soshanguve-BB",
+          "addressLocality": "Soshanguve",
+          "addressRegion": "Gauteng",
+          "postalCode": "0152",
+          "addressCountry": "ZA"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "-25.5372",
+          "longitude": "28.1123"
+        },
+        "openingHours": ["Tu-Su 09:00-18:00"],
+        "priceRange": "R50-R250",
+        "paymentAccepted": "Cash",
+        "currenciesAccepted": "ZAR",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Barber Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Fade Cut",
+                "description": "Professional fade haircut"
+              },
+              "price": "50",
+              "priceCurrency": "ZAR"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Cut & Dye",
+                "description": "Haircut with color treatment"
+              },
+              "price": "120",
+              "priceCurrency": "ZAR"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Mawhak",
+                "description": "Mawhak hairstyle"
+              },
+              "price": "150",
+              "priceCurrency": "ZAR"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Bleach & Dye",
+                "description": "Professional bleaching and dyeing service"
+              },
+              "price": "250",
+              "priceCurrency": "ZAR"
+            }
+          ]
+        },
+        "sameAs": [
+          "https://www.facebook.com/share/182EmKsnSv/?mibextid=wwXIfr",
+          "https://www.instagram.com/thatojayii?igsh=aWF4YnRtM2o3OGJh&utm_source=qr",
+          "https://www.tiktok.com/@thato.jay.ii?_r=1&_t=ZS-93Hh9ukzPnR"
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "reviewCount": "3"
+        }
+      }
+    </script>
 
     <!-- bootstrap link -->
     <link
@@ -107,8 +241,11 @@
 
     <main>
       <section class="hero">
-        <h1>Fresh Fade, <br />Every Day.</h1>
-        <p>Step in, sit back, and leave looking your best</p>
+        <h1>Fresh Fade, Every Day</h1>
+        <p>
+          Step in, sit back, and leave looking your best at Soshanguve's premier
+          barber shop
+        </p>
         <a
           href="https://wa.me/27626469447?text=Hi%20Jay!%20I'd%20like%20to%20book%20an%20appointment%20at%20JaydaBarber.%20When%20are%20you%20available?"
           target="_blank"
@@ -120,7 +257,7 @@
 
       <section class="services-prices">
         <div class="service-title">
-          <h2>Our Services & Prices</h2>
+          <h2>Our Barber Services & Prices</h2>
           <p>We carter for both Men and Women</p>
         </div>
         <div class="style-price">
@@ -153,7 +290,10 @@
           </div>
           <div class="item">
             <div class="style-pic">
-              <img src="media/images/homepage/fade.png" alt="Fade hairstyle" />
+              <img
+                src="media/images/homepage/fade.png"
+                alt="Professional fade haircut - R50 at JaydaBarber"
+              />
             </div>
             <p>Fade <br />R50</p>
           </div>
