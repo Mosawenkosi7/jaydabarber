@@ -11,14 +11,14 @@
 }
 
 h1 {
-  font-size: 55px !important;
+  font-size: 50px !important;
   /* color: red !important; */
   font-weight: bolder !important;
 }
 
 .hero p {
   font-size: 18px;
-  margin-top: 27px;
+  margin-top: 12px;
 }
 
 .book-btn {
