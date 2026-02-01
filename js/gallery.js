@@ -2,102 +2,102 @@
 
 // Gallery data structure - moved outside to load immediately
 const galleryItems = [
-    {
-      type: "image",
-      src: "/media/images/gallery/cut1.jpeg",
-      colSpan: 2,
-      rowSpan: 2,
-    },
-    {
-      type: "video",
-      src: "/media/images/gallery/WhatsApp Video 2026-01-19 at 15.42.17.mp4",
-      colSpan: 2,
-      rowSpan: 2,
-    },
-    {
-      type: "image",
-      src: "/media/images/gallery/cut2.jpeg",
-      colSpan: 1,
-      rowSpan: 1,
-    },
-    {
-      type: "image",
-      src: "/media/images/gallery/cut3.jpeg",
-      colSpan: 1,
-      rowSpan: 1,
-    },
-    {
-      type: "image",
-      src: "/media/images/gallery/fade1.jpeg",
-      colSpan: 2,
-      rowSpan: 1,
-    },
-    {
-      type: "image",
-      src: "/media/images/gallery/fade2.jpeg",
-      colSpan: 1,
-      rowSpan: 2,
-    },
-    {
-      type: "image",
-      src: "/media/images/gallery/fade2.jpeg",
-      colSpan: 2,
-      rowSpan: 1,
-    },
-    {
-      type: "video",
-      src: "/media/images/gallery/WhatsApp Video 2026-01-19 at 15.44.42.mp4",
-      colSpan: 2,
-      rowSpan: 2,
-    },
-    {
-      type: "image",
-      src: "/media/images/gallery/fade3.jpeg",
-      colSpan: 1,
-      rowSpan: 1,
-    },
-    {
-      type: "image",
-      src: "/media/images/gallery/WhatsApp Image 2026-01-21 at 20.15.56.jpeg",
-      colSpan: 1,
-      rowSpan: 1,
-    },
-    {
-      type: "image",
-      src: "/media/images/gallery/WhatsApp Image 2026-01-21 at 20.16.02.jpeg",
-      colSpan: 2,
-      rowSpan: 1,
-    },
-    {
-      type: "image",
-      src: "/media/images/gallery/WhatsApp Image 2026-01-21 at 20.16.08.jpeg",
-      colSpan: 1,
-      rowSpan: 2,
-    },
-    {
-      type: "image",
-      src: "/media/images/gallery/WhatsApp Image 2026-01-21 at 20.16.09.jpeg",
-      colSpan: 1,
-      rowSpan: 1,
-    },
-    {
-      type: "image",
-      src: "/media/images/gallery/WhatsApp Image 2026-01-21 at 20.16.12.jpeg",
-      colSpan: 2,
-      rowSpan: 2,
-    },
-    {
-      type: "image",
-      src: "/media/images/gallery/WhatsApp Image 2026-01-21 at 20.16.25.jpeg",
-      colSpan: 1,
-      rowSpan: 1,
-    },
-    {
-      type: "image",
-      src: "/media/images/gallery/WhatsApp Image 2026-01-21 at 20.16.29.jpeg",
-      colSpan: 1,
-      rowSpan: 1,
-    },
+  {
+    type: "image",
+    src: "/media/images/gallery/cut1.jpeg",
+    colSpan: 2,
+    rowSpan: 2,
+  },
+  {
+    type: "video",
+    src: "/media/images/gallery/WhatsApp Video 2026-01-19 at 15.42.17.mp4",
+    colSpan: 2,
+    rowSpan: 2,
+  },
+  {
+    type: "image",
+    src: "/media/images/gallery/cut2.jpeg",
+    colSpan: 1,
+    rowSpan: 1,
+  },
+  {
+    type: "image",
+    src: "/media/images/gallery/cut3.jpeg",
+    colSpan: 1,
+    rowSpan: 1,
+  },
+  {
+    type: "image",
+    src: "/media/images/gallery/fade1.jpeg",
+    colSpan: 2,
+    rowSpan: 1,
+  },
+  {
+    type: "image",
+    src: "/media/images/gallery/fade2.jpeg",
+    colSpan: 1,
+    rowSpan: 2,
+  },
+  {
+    type: "image",
+    src: "/media/images/gallery/jay-1.jpeg",
+    colSpan: 2,
+    rowSpan: 1,
+  },
+  {
+    type: "video",
+    src: "/media/images/gallery/WhatsApp Video 2026-01-19 at 15.44.42.mp4",
+    colSpan: 2,
+    rowSpan: 2,
+  },
+  {
+    type: "image",
+    src: "/media/images/gallery/fade3.jpeg",
+    colSpan: 1,
+    rowSpan: 1,
+  },
+  {
+    type: "image",
+    src: "/media/images/gallery/WhatsApp Image 2026-01-21 at 20.15.56.jpeg",
+    colSpan: 1,
+    rowSpan: 1,
+  },
+  {
+    type: "image",
+    src: "/media/images/gallery/WhatsApp Image 2026-01-21 at 20.16.02.jpeg",
+    colSpan: 2,
+    rowSpan: 1,
+  },
+  {
+    type: "image",
+    src: "/media/images/gallery/WhatsApp Image 2026-01-21 at 20.16.08.jpeg",
+    colSpan: 1,
+    rowSpan: 2,
+  },
+  {
+    type: "image",
+    src: "/media/images/gallery/WhatsApp Image 2026-01-21 at 20.16.09.jpeg",
+    colSpan: 1,
+    rowSpan: 1,
+  },
+  {
+    type: "image",
+    src: "/media/images/gallery/WhatsApp Image 2026-01-21 at 20.16.12.jpeg",
+    colSpan: 2,
+    rowSpan: 2,
+  },
+  {
+    type: "image",
+    src: "/media/images/gallery/WhatsApp Image 2026-01-21 at 20.16.25.jpeg",
+    colSpan: 1,
+    rowSpan: 1,
+  },
+  {
+    type: "image",
+    src: "/media/images/gallery/WhatsApp Image 2026-01-21 at 20.16.29.jpeg",
+    colSpan: 1,
+    rowSpan: 1,
+  },
 ];
 
 // Render gallery immediately when script loads
@@ -106,7 +106,7 @@ function renderGallery() {
   if (!gallery) return; // Exit if gallery not found yet
 
   // Clear loading state and any existing content
-  gallery.innerHTML = '';
+  gallery.innerHTML = "";
 
   // Render gallery items with optimized loading
   galleryItems.forEach((item, index) => {
@@ -133,12 +133,12 @@ function renderGallery() {
       video.loop = true;
       video.preload = "metadata"; // Lighter preload for faster initial load
       video.loading = "lazy";
-      
+
       wrapper.appendChild(video);
     }
 
     // Add click event to open lightbox
-    wrapper.addEventListener('click', () => {
+    wrapper.addEventListener("click", () => {
       openLightbox(index);
     });
 
@@ -147,8 +147,8 @@ function renderGallery() {
 }
 
 // Try to render immediately if DOM is ready, otherwise wait
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', renderGallery);
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", renderGallery);
 } else {
   renderGallery();
 }
@@ -157,44 +157,44 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("Gallery page loaded");
 
   // Lightbox functionality
-  const lightbox = document.getElementById('lightbox');
-  const lightboxContent = document.getElementById('lightbox-content');
-  const lightboxClose = document.getElementById('lightbox-close');
-  const lightboxPrev = document.getElementById('lightbox-prev');
-  const lightboxNext = document.getElementById('lightbox-next');
-  const lightboxCounter = document.getElementById('lightbox-counter');
+  const lightbox = document.getElementById("lightbox");
+  const lightboxContent = document.getElementById("lightbox-content");
+  const lightboxClose = document.getElementById("lightbox-close");
+  const lightboxPrev = document.getElementById("lightbox-prev");
+  const lightboxNext = document.getElementById("lightbox-next");
+  const lightboxCounter = document.getElementById("lightbox-counter");
   let currentIndex = 0;
 
   function openLightbox(index) {
     currentIndex = index;
     updateLightboxContent();
-    lightbox.classList.add('active');
-    document.body.style.overflow = 'hidden';
+    lightbox.classList.add("active");
+    document.body.style.overflow = "hidden";
   }
 
   function closeLightbox() {
-    lightbox.classList.remove('active');
-    document.body.style.overflow = '';
+    lightbox.classList.remove("active");
+    document.body.style.overflow = "";
     // Pause any videos
-    const video = lightboxContent.querySelector('video');
+    const video = lightboxContent.querySelector("video");
     if (video) {
       video.pause();
     }
   }
 
   function updateLightboxContent() {
-    lightboxContent.innerHTML = '';
+    lightboxContent.innerHTML = "";
     const item = galleryItems[currentIndex];
 
-    if (item.type === 'image') {
-      const img = document.createElement('img');
+    if (item.type === "image") {
+      const img = document.createElement("img");
       img.src = item.src;
-      img.alt = 'JaydaBarber work';
+      img.alt = "JaydaBarber work";
       lightboxContent.appendChild(img);
     }
 
-    if (item.type === 'video') {
-      const video = document.createElement('video');
+    if (item.type === "video") {
+      const video = document.createElement("video");
       video.src = item.src;
       video.controls = true;
       video.autoplay = true;
@@ -207,7 +207,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function showPrev() {
-    currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+    currentIndex =
+      (currentIndex - 1 + galleryItems.length) % galleryItems.length;
     updateLightboxContent();
   }
 
@@ -217,26 +218,26 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Event listeners for lightbox
-  lightboxClose.addEventListener('click', closeLightbox);
-  lightboxPrev.addEventListener('click', showPrev);
-  lightboxNext.addEventListener('click', showNext);
+  lightboxClose.addEventListener("click", closeLightbox);
+  lightboxPrev.addEventListener("click", showPrev);
+  lightboxNext.addEventListener("click", showNext);
 
   // Close lightbox when clicking outside content
-  lightbox.addEventListener('click', (e) => {
+  lightbox.addEventListener("click", (e) => {
     if (e.target === lightbox) {
       closeLightbox();
     }
   });
 
   // Keyboard navigation
-  document.addEventListener('keydown', (e) => {
-    if (!lightbox.classList.contains('active')) return;
+  document.addEventListener("keydown", (e) => {
+    if (!lightbox.classList.contains("active")) return;
 
-    if (e.key === 'Escape') {
+    if (e.key === "Escape") {
       closeLightbox();
-    } else if (e.key === 'ArrowLeft') {
+    } else if (e.key === "ArrowLeft") {
       showPrev();
-    } else if (e.key === 'ArrowRight') {
+    } else if (e.key === "ArrowRight") {
       showNext();
     }
   });
@@ -245,11 +246,11 @@ document.addEventListener("DOMContentLoaded", () => {
   let touchStartX = 0;
   let touchEndX = 0;
 
-  lightboxContent.addEventListener('touchstart', (e) => {
+  lightboxContent.addEventListener("touchstart", (e) => {
     touchStartX = e.changedTouches[0].screenX;
   });
 
-  lightboxContent.addEventListener('touchend', (e) => {
+  lightboxContent.addEventListener("touchend", (e) => {
     touchEndX = e.changedTouches[0].screenX;
     handleSwipe();
   });
