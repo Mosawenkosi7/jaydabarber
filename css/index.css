@@ -109,6 +109,14 @@ h1 {
   background-color: yellow;
 }
 
+.availability p:nth-child(2) {
+  margin-bottom: 0;
+}
+.availability p:nth-child(5) {
+  margin-bottom: 0;
+  /* color: red; */
+}
+
 .card-details i {
   margin-right: 3px;
 }
