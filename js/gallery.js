@@ -100,6 +100,66 @@ const galleryItems = [
   },
 ];
 
+// Global lightbox variables
+let currentIndex = 0;
+let lightbox, lightboxContent, lightboxClose, lightboxPrev, lightboxNext, lightboxCounter;
+
+// Lightbox functions - moved to global scope
+function openLightbox(index) {
+  currentIndex = index;
+  updateLightboxContent();
+  lightbox.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function closeLightbox() {
+  lightbox.classList.remove("active");
+  document.body.style.overflow = "";
+  // Pause any videos
+  const video = lightboxContent.querySelector("video");
+  if (video) {
+    video.pause();
+  }
+}
+
+function updateLightboxContent() {
+  if (!lightboxContent) return;
+  
+  lightboxContent.innerHTML = "";
+  const item = galleryItems[currentIndex];
+
+  if (item.type === "image") {
+    const img = document.createElement("img");
+    img.src = item.src;
+    img.alt = "JaydaBarber work";
+    lightboxContent.appendChild(img);
+  }
+
+  if (item.type === "video") {
+    const video = document.createElement("video");
+    video.src = item.src;
+    video.controls = true;
+    video.autoplay = true;
+    video.loop = true;
+    lightboxContent.appendChild(video);
+  }
+
+  // Update counter
+  if (lightboxCounter) {
+    lightboxCounter.textContent = `${currentIndex + 1} / ${galleryItems.length}`;
+  }
+}
+
+function showPrev() {
+  currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+  updateLightboxContent();
+}
+
+function showNext() {
+  currentIndex = (currentIndex + 1) % galleryItems.length;
+  updateLightboxContent();
+}
+
 // Render gallery immediately when script loads
 function renderGallery() {
   const gallery = document.getElementById("gallery");
@@ -156,82 +216,37 @@ if (document.readyState === "loading") {
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Gallery page loaded");
 
-  // Lightbox functionality
-  const lightbox = document.getElementById("lightbox");
-  const lightboxContent = document.getElementById("lightbox-content");
-  const lightboxClose = document.getElementById("lightbox-close");
-  const lightboxPrev = document.getElementById("lightbox-prev");
-  const lightboxNext = document.getElementById("lightbox-next");
-  const lightboxCounter = document.getElementById("lightbox-counter");
-  let currentIndex = 0;
-
-  function openLightbox(index) {
-    currentIndex = index;
-    updateLightboxContent();
-    lightbox.classList.add("active");
-    document.body.style.overflow = "hidden";
-  }
-
-  function closeLightbox() {
-    lightbox.classList.remove("active");
-    document.body.style.overflow = "";
-    // Pause any videos
-    const video = lightboxContent.querySelector("video");
-    if (video) {
-      video.pause();
-    }
-  }
-
-  function updateLightboxContent() {
-    lightboxContent.innerHTML = "";
-    const item = galleryItems[currentIndex];
-
-    if (item.type === "image") {
-      const img = document.createElement("img");
-      img.src = item.src;
-      img.alt = "JaydaBarber work";
-      lightboxContent.appendChild(img);
-    }
-
-    if (item.type === "video") {
-      const video = document.createElement("video");
-      video.src = item.src;
-      video.controls = true;
-      video.autoplay = true;
-      video.loop = true;
-      lightboxContent.appendChild(video);
-    }
-
-    // Update counter
-    lightboxCounter.textContent = `${currentIndex + 1} / ${galleryItems.length}`;
-  }
-
-  function showPrev() {
-    currentIndex =
-      (currentIndex - 1 + galleryItems.length) % galleryItems.length;
-    updateLightboxContent();
-  }
-
-  function showNext() {
-    currentIndex = (currentIndex + 1) % galleryItems.length;
-    updateLightboxContent();
-  }
+  // Initialize lightbox elements
+  lightbox = document.getElementById("lightbox");
+  lightboxContent = document.getElementById("lightbox-content");
+  lightboxClose = document.getElementById("lightbox-close");
+  lightboxPrev = document.getElementById("lightbox-prev");
+  lightboxNext = document.getElementById("lightbox-next");
+  lightboxCounter = document.getElementById("lightbox-counter");
 
   // Event listeners for lightbox
-  lightboxClose.addEventListener("click", closeLightbox);
-  lightboxPrev.addEventListener("click", showPrev);
-  lightboxNext.addEventListener("click", showNext);
+  if (lightboxClose) {
+    lightboxClose.addEventListener("click", closeLightbox);
+  }
+  if (lightboxPrev) {
+    lightboxPrev.addEventListener("click", showPrev);
+  }
+  if (lightboxNext) {
+    lightboxNext.addEventListener("click", showNext);
+  }
 
   // Close lightbox when clicking outside content
-  lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) {
-      closeLightbox();
-    }
-  });
+  if (lightbox) {
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+  }
 
   // Keyboard navigation
   document.addEventListener("keydown", (e) => {
-    if (!lightbox.classList.contains("active")) return;
+    if (!lightbox || !lightbox.classList.contains("active")) return;
 
     if (e.key === "Escape") {
       closeLightbox();
@@ -246,14 +261,16 @@ document.addEventListener("DOMContentLoaded", () => {
   let touchStartX = 0;
   let touchEndX = 0;
 
-  lightboxContent.addEventListener("touchstart", (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-  });
+  if (lightboxContent) {
+    lightboxContent.addEventListener("touchstart", (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
 
-  lightboxContent.addEventListener("touchend", (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    handleSwipe();
-  });
+    lightboxContent.addEventListener("touchend", (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    });
+  }
 
   function handleSwipe() {
     const swipeThreshold = 50;
